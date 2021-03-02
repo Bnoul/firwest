@@ -1,2 +1,2 @@
 # firwest
-hello its my first commit
+hello its my first commit =)
