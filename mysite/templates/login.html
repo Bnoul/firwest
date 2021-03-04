@@ -1,0 +1,27 @@
+{% extends  'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+<div class="card">
+<div class="card-body">
+<h4 class="card-title">Log in to your account</h4>
+
+<form method="post">
+{% csrf_token %}
+<input type="hidden" name="next" value="{{ next }}">
+
+{{ form|crispy }}
+    <div style="margin-left:20%;">
+    <div style="height:10px;"></div>
+    <label for="t">Enter username</label><br>
+    <input id="t" type="text" name="username"><br>
+    <div style="height:10px;"></div>
+    <label for="b">Enter password</label><br>
+    <input id="b" type="password" name="password"><br>
+        <div style="height:10px;"></div>
+    </div>
+<button type="submit" class="btn btn-primary btn-block">Log in</button>
+</form>
+</div>
+</div>
+{% endblock %}

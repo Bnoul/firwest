@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'myapp:detail' question.id %}">{{ question.question_text }}</a></li>
+            </a> (Опубликовано: {{question.pub_date}} )</li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>Нет доступных вопросов</p>
+        {% endif %}
+
+
+
+        
+    </body>
+</html>
+
+
+

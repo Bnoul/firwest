@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="test/css/bootstrap.min.css">
+	<title>pop dog</title>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<div class="form-group">
+				<label for="emailID">
+					Почтовый ящичек
+				</label>
+					<input type="email" class="form-control" id="emailID" aria-describedby="podskazka" placeholder="Введите email">
+				<small id="podskazka" class="form-text text-muted">клянёмся ваша 		почта утечёт в сеть.
+				</small>
+			</div>
+
+			<div class="form-group">
+          		<label for="passID">Парольчик</label>
+          		<input type="password" class="form-control" id="passID" aria-describedby="podskazoka" placeholder="Введите пароль">
+         		 <small id="podskazoka" class="form-text text-muted">клянёмся ваш пороль утечёт в сеть.
+        	</div>
+
+        	<div class="form-group">
+        		<label for="slideID">по школе от 1 до 10 на сколько вы хотите чтобы ваши данные утекли в сеть?</label>
+        		<input type="range" value="0" class="custom-range" min="0" max="10"
+        		id="sliderID">
+        		<div class="text-center">
+        		<h3 id="slidreText">
+        			0
+        		</h3>
+        		</div>
+        	</div>
+        	<div class="row form-group">
+        		<div class="col-6">
+				<label for="famID">
+					фамилия
+				</label>
+					<input type="text" class="form-control" id="famID"  placeholder="Введите фамилию">
+				</div>
+				<div class="col-2">
+				<label for="namID">
+					имя
+				</label>
+					<input type="text" class="form-control" id="namID"  placeholder="Введите имя">
+				</div>
+				<div class="col-4">
+				<label for="otcID">
+					отчество
+				</label>
+					<input type="text" class="form-control" id="otcID"  placeholder="Введите отчество">
+				</div>
+			</div>
+			<div class="row form-group">
+        		<div class="col-4">
+				<label for="cytiID">
+					город
+				</label>
+					<select id="city" class="form-control">
+						<option selected>Томск</option>
+						<option>Минск</option>
+						<option>Гродно</option>
+						<option>Красноярск</option>
+						</select>
+				</div>
+				<div class="col-3">
+				<label for="streID">
+					улица
+				</label>
+					<input type="text" class="form-control" id="streID"  placeholder="Введите улицу">
+				</div>
+				<div class="col-5">
+				<label for="homeID">
+					дом
+				</label>
+					<input type="text" class="form-control" id="homeID"  placeholder="Введите дом">
+				</div>
+			</div>
+			<div ></div>
+			<label for="multi">на сколько вас взломали</label>
+			<select multiple class="form-control" id="multi">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<label for="textAreaID">пожалуйста напишите на нас жалобу</label>
+			<textarea class="form-control" id="textAreaID" rows="3"></textarea>
+			<div class="form-group">
+				<label for="example">Подгрузи фотку:)</label>
+				<input id="example" type="file" class="form-control-file">
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="checkbox1">
+				<label class="form-check-label" for="checkbox1" >
+					 любите кошек.
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="checkbox2">
+				<label class="form-check-label" for="checkbox2">
+					 любите собак.
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="groupName" id="exampleradio1" value="option1" checked>
+				<label class="form-check-label" for="exampleradio1">любите собак.</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="groupName" id="exampleradio2" value="option2">
+				<label class="form-check-label" for="exampleradio2">любите котов.</label>
+			</div>
+
+			<button type="submite" class="btn btn-primary">Отправить в сеть</button>
+			<button type="reset" class="btn btn-danger">не нажимать(всё reset)</button>
+		</form>
+	</div>
+<script type="text/javascript" src="pay.js"></script>
+	<script src="js/jquery-3.3.1.min.js" ></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script type="text/javascript">
+    	$("#sliderID").on("change", function(){alert($("#sliderID").val());
+    		$("#slidreText").text($("#sliderID").val());
+    });
+    	
+    </script>
+</body>
+</html>
